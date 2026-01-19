@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>hotel-verdealle.net</title>
+  <style>
+    body {
+      background: #041f12;
+      color: #7CFF9B;
+      font-family: "Courier New", monospace;
+      padding: 40px;
+    }
+    .terminal {
+      max-width: 900px;
+      margin: auto;
+      border: 1px solid #0f3;
+      padding: 30px;
+      box-shadow: 0 0 25px #0f3;
+    }
+    .hidden { display: none; }
+    button {
+      background: transparent;
+      color: #7CFF9B;
+      border: 1px solid #7CFF9B;
+      padding: 10px 20px;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    button:hover { background: #0f3; color: #041f12; }
+    .log {
+      margin-top: 20px;
+      white-space: pre-wrap;
+    }
+    .glitch {
+      animation: glitch 1s infinite;
+    }
+    @keyframes glitch {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <div id="boot">
+      &gt; INICIALIZANDO SISTEMA – HOTEL VERDEALLE<br>
+      &gt; ERRO: CAMADA DE REALIDADE INSTÁVEL<br>
+      &gt; RECUPERANDO LOGS...
+    </div><div id="intro" class="hidden">
+  <p class="glitch">VOCÊ NÃO DEVERIA ESTAR AQUI</p>
+  <p>MAS JÁ ESTÁ</p>
+  <p>SE ESTÁ LENDO ISTO,<br>ALGO JÁ FALHOU</p>
+  <button onclick="mostrarLogs()">ACESSAR LOGS</button>
+</div>
+
+<div id="logs" class="hidden">
+  <p>&gt; ARQUIVOS ENCONTRADOS:</p>
+  <ul>
+    <li><button onclick="abrirLog('l1998')">log_1998_11_02.txt</button></li>
+    <li><button onclick="abrirLog('l1989')">log_1989_07_14.txt</button></li>
+    <li class="glitch">log_????_??_??.txt [BLOQUEADO]</li>
+  </ul>
+</div>
+
+<div id="l1998" class="log hidden">
+
+Relatório de Atividade – Sala de Processamento Hotel Verdealle – Ala Técnica
+
+23:41 – Oscilação elétrica 23:43 – Tela apresentou símbolos não reconhecidos 23:44 – Funcionário relatou "ver algo entre os quadros" 23:45 – SISTEMA NÃO RESPONDE 23:45 – SISTEMA RESPONDE DEMAIS
+
+<span style="color:#355">ele aprende observando</span> </div>
+
+<div id="l1989" class="log hidden">
+
+Instalação experimental concluída. Local: Subsolo do Hotel Verdealle
+
+Primeiros testes bem-sucedidos.
+
+Observação: A imagem permanece mesmo quando a tela apaga.
+
+<span style="color:#355">não procure um rosto</span> </div>
+
+<!-- NAO PROCURE UM ROSTO -->
+
+<!-- PROCURE UM QUARTO --><!-- VERDEALLE NÃO FECHA -->  </div>  <script>
+    setTimeout(() => {
+      document.getElementById('intro').classList.remove('hidden');
+    }, 3000);
+
+    function mostrarLogs() {
+      document.getElementById('logs').classList.remove('hidden');
+    }
+
+    function abrirLog(id) {
+      document.querySelectorAll('.log').forEach(l => l.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script></body>
+</html>
